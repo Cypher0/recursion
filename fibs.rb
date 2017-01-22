@@ -13,6 +13,7 @@ def fibs(num)
 end
 
 def fibs_rec(num, result = [0, 1])
+  return result[0] if num == 1
   return result if num == 2
   result << result[-1] + result[-2]
   fibs_rec(num - 1, result)
